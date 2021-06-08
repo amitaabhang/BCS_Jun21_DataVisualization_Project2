@@ -89,6 +89,8 @@ o	User can also filter for multiple condition.
 
 #Heroku Deployment Completed for the above project. Link is https://olympics-race-to-gold.herokuapp.com/
 
+Presentation: https://docs.google.com/presentation/d/179ypX_-Zxhn2IEcdcR50fiDmQTCdIkHbL24VL_0bgPk/edit?usp=sharing
+
 
 
 
