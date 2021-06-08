@@ -22,12 +22,12 @@ dataTable = Database.athlete_record
 logoTable = Database.logo_info
 
 class DataStore():
-    year = 2000;
+    year = 1896;
 
 @app.route("/")
 def index():
     
-    data.year = 2000;
+    data.year = 1896;
 
     FIELDS1 = { 'Event': True,
             'Logo_url':True,

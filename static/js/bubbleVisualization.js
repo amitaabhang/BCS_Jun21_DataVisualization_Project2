@@ -15,14 +15,14 @@
 
     var countryFullNameList = []
         var countryFullData = dataset.map(countryListFn => countryListFn.Country);
-        console.log(countryFullData)
+        //console.log(countryFullData)
         countryFullData.forEach((countryfullName) => {
             if (!(countryFullNameList.includes(countryfullName))){     
                 countryFullNameList.push(countryfullName);
             }
         })    
 
-        console.log(countryFullNameList)
+        //console.log(countryFullNameList)
         var medalObj = [];
         countryList.forEach((countryName)=> {
             const distinct = (value, index, self)=>{
@@ -34,23 +34,23 @@
                 return country.Country;
             }).filter(distinct)
             const [countryFullname] = fullNameCountry
-            console.log(countryFullname)
+            //console.log(countryFullname)
         
             var countryItem = {};
             var goldMedal = dataset.filter(medalFn => (medalFn.NOC === countryName) && (medalFn.Medal === "Gold"));
             var silverMedal = dataset.filter(medalFn => (medalFn.NOC === countryName) && (medalFn.Medal === "Silver"));
             var bronzeMedal = dataset.filter(medalFn => (medalFn.NOC === countryName) && (medalFn.Medal === "Bronze"));
-            console.log(countryName+":"+goldMedal.length+":"+silverMedal.length+":"+bronzeMedal.length)
+            //console.log(countryName+":"+goldMedal.length+":"+silverMedal.length+":"+bronzeMedal.length)
             countryItem["Code"] = countryName;
             countryItem["Country"] = countryFullname;
            
             countryItem["TotalMedal"]  = goldMedal.length + silverMedal.length + bronzeMedal.length;
             medalObj.push(countryItem);
         })
-        console.log("medalobj")
+        /*console.log("medalobj")
         console.log(medalObj)
         console.log("countrydata")
-        console.log(countryData)
+        console.log(countryData)*/
         
        
     
@@ -72,9 +72,9 @@
         
     });
     
-    console.log("result");
+    /*console.log("result");
     console.log(result);
-    console.log(fullName);
+    console.log(fullName);*/
     
     Highcharts.chart('container', {
       chart: {

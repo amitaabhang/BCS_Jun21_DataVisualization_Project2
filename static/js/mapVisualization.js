@@ -5,7 +5,7 @@ var mapIndicator = false;
 var counter = 0;
 
 function createMap(countrydata) {
-  console.log('in create map');
+  //console.log('in create map');
 
   d3.select('map').html("");
   var container = L.DomUtil.get('map');
@@ -32,7 +32,7 @@ function createMap(countrydata) {
   // }
 
   // Creating map object
-  console.log(countrydata);
+  //console.log(countrydata);
 
   var myMap = L.map("map", {
     center: [55.37, -3.4],
@@ -82,14 +82,14 @@ function setMedalDetails(countryCode) {
 
       var countryDict = countryMedalLst[0];
       if (olympicGlobalData[i].NOC == 'FIN') {
-        console.log(olympicGlobalData[i].NOC);
-        console.log(olympicGlobalData[i].Medal);
+        //console.log(olympicGlobalData[i].NOC);
+        //console.log(olympicGlobalData[i].Medal);
       }
       if (olympicGlobalData[i].Medal == 'None');
       else {
-        console.log('Medal other than none');
+        //console.log('Medal other than none');
         if (olympicGlobalData[i].Medal == 'Gold') {
-          console.log(countryDict["Gold"]);
+          //console.log(countryDict["Gold"]);
           countryDict["Gold"] = countryDict["Gold"] + 1;
         }
         else if (olympicGlobalData[i].Medal == 'Silver')
@@ -137,10 +137,10 @@ function createFeatures(countrydata) {
 
   }
 
-  var coutriesJSON =[];
+  var coutriesJSON = [];
   coutriesJSON = countrydata;
   // Grabbing our GeoJSON data..
-  console.log(countrydata);
+  //console.log(countrydata);
 
   var geoJSONFilter = [];
   /*for(i=0;i<countryList.length; i++){
@@ -155,19 +155,19 @@ function createFeatures(countrydata) {
     }
   })
 
-  console.log('GeoJSON:' + geoJSONFilter);
+  //console.log('GeoJSON:' + geoJSONFilter);
 
   var countries = L.geoJson(geoJSONFilter, {
     // Style each feature (in this case a neighborhood)
     style: function (feature) {
-     // if (countryList.includes(feature.properties.adm0_a3)) {
-        return {
-          color: "white",
-          // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
-          fillColor: getRandomColor(feature.properties.sovereignt),
-          fillOpacity: 5,
-          weight: 0.5
-        };
+      // if (countryList.includes(feature.properties.adm0_a3)) {
+      return {
+        color: "white",
+        // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
+        fillColor: getRandomColor(feature.properties.sovereignt),
+        fillOpacity: 5,
+        weight: 0.5
+      };
       //}
     },
     onEachFeature: onEachFeature
@@ -181,7 +181,7 @@ function mapChart() {
 
 
   counter += 1;
-  console.log('Counter in Map:' + counter);
+  //console.log('Counter in Map:' + counter);
 
   // Use this link to get the geojson data.
   var link = "static/data/countries.geojson";
